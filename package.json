@@ -1,6 +1,6 @@
 {
   "name": "validate.io-finite",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Validates if a value is a finite number.",
   "author": {
     "name": "Athan Reines",
