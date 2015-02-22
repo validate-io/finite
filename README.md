@@ -1,4 +1,4 @@
-finite
+Finite
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
@@ -17,18 +17,39 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-finite' );
+var isFiniteNumber = require( 'validate.io-finite' );
 ```
 
-#### foo( value )
+#### isFiniteNumber( value )
 
-What does this function do?
+Validates if a `value` is a finite `number`.
+
+``` javascript
+var value = Number.MAX_VALUE;
+
+var bool = isFiniteNumber( value );
+// returns true
+```
+
+__Note__: this method differs from the `global` method `isFinite()` in that the `global` method will validate non-numeric values. For any non-numeric `value`, this method returns `false`.
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-finite' );
+var isFiniteNumber = require( 'validate.io-finite' );
+
+console.log( isFiniteNumber( Number.MAX_VALUE ) );
+// returns true
+
+console.log( isFiniteNumber( Number.POSITIVE_INFINITY ) );
+// returns false
+
+console.log( isFiniteNumber( NaN ) );
+// returns false
+
+console.log( isFiniteNumber( '5' ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,

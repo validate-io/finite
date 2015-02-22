@@ -26,12 +26,21 @@
     "validate.io",
     "validate",
     "validation",
-    "validator"
+    "validator",
+    "valid",
+    "number",
+    "finite",
+    "is",
+    "isfinite",
+    "finitenumber",
+    "isfinitenumber"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/finite/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "validate.io-number": "^1.0.3"
+  },
   "devDependencies": {
     "chai": "1.x.x",
     "mocha": "1.x.x",
